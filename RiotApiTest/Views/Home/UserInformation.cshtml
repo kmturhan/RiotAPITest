@@ -23,7 +23,7 @@
     double Millieconds = Model.UI.revisionDate;
     TimeSpan ts = TimeSpan.FromMilliseconds(Millieconds);
     DateTime dt = new DateTime(1970, 1, 1) + ts;
-    
+
 }
 
 <!--Champions ID List Match-->
@@ -37,214 +37,141 @@
         item.timestamp = dtMatch.ToShortDateString() + " " + dtMatch.ToLongTimeString();
         switch (item.champion)
         {
-            case 1:
-                item.ChampionName = "Annie"; break;
-            case 2:
-                item.ChampionName = "Olaf"; break;
-            case 3:
-                item.ChampionName = "Galio"; break;
-            case 4:
-                item.ChampionName = "Twisted Fate"; break;
-            case 5:
-                item.ChampionName = "Xin Zhao"; break;
-            case 6:
-                item.ChampionName = "Urgot"; break;
-            case 7:
-                item.ChampionName = "LeBlanc"; break;
-            case 8:
-                item.ChampionName = "Vladimir"; break;
-            case 9:
-                item.ChampionName = "Fiddlesticks"; break;
-            case 10:
-                item.ChampionName = "Kayle"; break;
-            case 11:
-                item.ChampionName = "Master Yi"; break;
-            case 12:
-                item.ChampionName = "Alistar"; break;
-            case 13:
-                item.ChampionName = "Ryze"; break;
-            case 14:
-                item.ChampionName = "Sion"; break;
-            case 15:
-                item.ChampionName = "Sivir"; break;
-            case 16:
-                item.ChampionName = "Soraka"; break;
-            case 17:
-                item.ChampionName = "Teemo"; break;
-            case 18:
-                item.ChampionName = "Tristana"; break;
-            case 19:
-                item.ChampionName = "Warwick"; break;
-            case 20:
-                item.ChampionName = "Nunu"; break;
-            case 21:
-                item.ChampionName = "Miss Fortune"; break;
-            case 22:
-                item.ChampionName = "Ashe"; break;
-            case 23:
-                item.ChampionName = "Tryndamere"; break;
-            case 24:
-                item.ChampionName = "Jax"; break;
-            case 25:
-                item.ChampionName = "Morgana"; break;
-            case 26:
-                item.ChampionName = "Zilean"; break;
-            case 27:
-                item.ChampionName = "Singed"; break;
-            case 28:
-                item.ChampionName = "Evelynn"; break;
-            case 29:
-                item.ChampionName = "Twitch"; break;
-            case 30:
-                item.ChampionName = "Karthus"; break;
-            case 31:
-                item.ChampionName = "Cho'Gath"; break;
-            case 32:
-                item.ChampionName = "Amumu"; break;
-            case 33:
-                item.ChampionName = "Rammus"; break;
-            case 34:
-                item.ChampionName = "Anivia"; break;
-            case 35:
-                item.ChampionName = "Shaco"; break;
-            case 36:
-                item.ChampionName = "Dr. Mundo"; break;
-            case 37:
-                item.ChampionName = "Sona"; break;
-            case 38:
-                item.ChampionName = "Kassadin"; break;
-            case 39:
-                item.ChampionName = "Irelia"; break;
-            case 40:
-                item.ChampionName = "Janna"; break;
-            case 41:
-                item.ChampionName = "Gangplank"; break;
-            case 42:
-                item.ChampionName = "Corki"; break;
-            case 43:
-                item.ChampionName = "Karma"; break;
-            case 44:
-                item.ChampionName = "Taric"; break;
-            case 45:
-                item.ChampionName = "Veigar"; break;
-            case 48:
-                item.ChampionName = "Trundle"; break;
-            case 50:
-                item.ChampionName = "Swain"; break;
-            case 51:
-                item.ChampionName = "Caitlyn"; break;
-            case 53:
-                item.ChampionName = "Blitzcrank"; break;
-            case 54:
-                item.ChampionName = "Malphite"; break;
-            case 55:
-                item.ChampionName = "Katarina"; break;
-            case 56:
-                item.ChampionName = "Nocturne"; break;
-            case 57:
-                item.ChampionName = "Maokai"; break;
-            case 58:
-                item.ChampionName = "Renekton"; break;
-            case 59:
-                item.ChampionName = "Jarvan IV"; break;
-            case 61:
-                item.ChampionName = "Orianna"; break;
-            case 62:
-                item.ChampionName = "Wukong"; break;
-            case 63:
-                item.ChampionName = "Brand"; break;
-            case 64:
-                item.ChampionName = "Lee Sin"; break;
-            case 67:
-                item.ChampionName = "Vayne"; break;
-            case 68:
-                item.ChampionName = "Rumble"; break;
-            case 69:
-                item.ChampionName = "Cassiopeia"; break;
-            case 72:
-                item.ChampionName = "Skarner"; break;
-            case 74:
-                item.ChampionName = "Heimerdinger"; break;
-            case 75:
-                item.ChampionName = "Nasus"; break;
-            case 76:
-                item.ChampionName = "Nidalee"; break;
-            case 77:
-                item.ChampionName = "Udyr"; break;
-            case 78:
-                item.ChampionName = "Poppy"; break;
-            case 79:
-                item.ChampionName = "Gragas"; break;
-            case 80:
-                item.ChampionName = "Pantheon"; break;
-            case 81:
-                item.ChampionName = "Ezreal"; break;
-            case 82:
-                item.ChampionName = "Mordekaiser"; break;
-            case 83:
-                item.ChampionName = "Yorick"; break;
-            case 84:
-                item.ChampionName = "Akali"; break;
-            case 85:
-                item.ChampionName = "Kennen"; break;
-            case 86:
-                item.ChampionName = "Garen"; break;
-            case 89:
-                item.ChampionName = "Leona"; break;
-            case 90:
-                item.ChampionName = "Malzahar"; break;
-            case 91:
-                item.ChampionName = "Talon"; break;
-            case 92:
-                item.ChampionName = "Riven"; break;
-            case 96:
-                item.ChampionName = "Kog'Maw"; break;
-            case 98:
-                item.ChampionName = "Shen"; break;
-            case 99:
-                item.ChampionName = "Lux"; break;
-            case 101:
-                item.ChampionName = "Xerath"; break;
-            case 102:
-                item.ChampionName = "Shyvana"; break;
-            case 103:
-                item.ChampionName = "Ahri"; break;
-            case 104:
-                item.ChampionName = "Graves"; break;
-            case 105:
-                item.ChampionName = "Fizz"; break;
-            case 106:
-                item.ChampionName = "Volibear"; break;
-            case 107:
-                item.ChampionName = "Rengar"; break;
-            case 110:
-                item.ChampionName = "Varus"; break;
-            case 111:
-                item.ChampionName = "Nautilus"; break;
-            case 112:
-                item.ChampionName = "Viktor"; break;
-            case 113:
-                item.ChampionName = "Sejuani"; break;
-            case 114:
-                item.ChampionName = "Fiora"; break;
-            case 115:
-                item.ChampionName = "Ziggs"; break;
-            case 117:
-                item.ChampionName = "Lulu"; break;
-            case 119:
-                item.ChampionName = "Draven"; break;
-            case 120:
-                item.ChampionName = "Hecarim"; break;
-            case 122:
-                item.ChampionName = "Darius"; break;
-            case 126:
-                item.ChampionName = "Jayce"; break;
-            case 131:
-                item.ChampionName = "Diana"; break;
-            case 143:
-                item.ChampionName = "Zyra"; break;
-            default:
-                item.ChampionName = "Bulunamadı"; break;
+            case 267: item.ChampionName = "Nami"; break;
+            case 59: item.ChampionName = "Jarvan IV"; break;
+            case 81: item.ChampionName = "Ezreal"; break; 
+            case 266: item.ChampionName = "Aatrox"; break;
+            case 412: item.ChampionName = "Thresh"; break;
+            case 23: item.ChampionName = "Tryndamere"; break;
+            case 79: item.ChampionName = "Gragas"; break;
+            case 69: item.ChampionName = "Cassiopeia"; break;
+            case 136: item.ChampionName = "Aurelion Sol"; break;
+            case 13: item.ChampionName = "Ryze"; break;
+            case 78: item.ChampionName = "Poppy"; break;
+            case 14: item.ChampionName = "Sion"; break;
+            case 1: item.ChampionName = "Annie"; break;
+            case 202: item.ChampionName = "Jhin"; break;
+            case 43: item.ChampionName = "Karma"; break;
+            case 111: item.ChampionName = "Nautilus"; break;
+            case 240: item.ChampionName = "Kled"; break;
+            case 99: item.ChampionName = "Lux"; break;
+            case 103: item.ChampionName = "Ahri"; break;
+            case 2: item.ChampionName = "Olaf"; break;
+            case 112: item.ChampionName = "Viktor"; break;
+            case 34: item.ChampionName = "Anivia"; break;
+            case 27: item.ChampionName = "Singed"; break;
+            case 86: item.ChampionName = "Garen"; break;
+            case 127: item.ChampionName = "Lissandra"; break;
+            case 57: item.ChampionName = "Maokai"; break;
+            case 25: item.ChampionName = "Morgana"; break;
+            case 28: item.ChampionName = "Evelynn"; break;
+            case 105: item.ChampionName = "Fizz"; break;
+            case 74: item.ChampionName = "Heimerdinger"; break;
+            case 238: item.ChampionName = "Zed"; break;
+            case 68: item.ChampionName = "Rumble"; break;
+            case 82: item.ChampionName = "Mordekaiser"; break;
+            case 37: item.ChampionName = "Sona"; break;
+            case 96: item.ChampionName = "Kog'Maw"; break;
+            case 55: item.ChampionName = "Katarina"; break;
+            case 117: item.ChampionName = "Lulu"; break;
+            case 22: item.ChampionName = "Ashe"; break;
+            case 30: item.ChampionName = "Karthus"; break;
+            case 12: item.ChampionName = "Alistar"; break;
+            case 122: item.ChampionName = "Darius"; break;
+            case 67: item.ChampionName = "Vayne"; break;
+            case 110: item.ChampionName = "Varus"; break;
+            case 77: item.ChampionName = "Udyr"; break;
+            case 89: item.ChampionName = "Leona"; break;
+            case 126: item.ChampionName = "Jayce"; break;
+            case 134: item.ChampionName = "Syndra"; break;
+            case 80: item.ChampionName = "Pantheon"; break;
+            case 92: item.ChampionName = "Riven"; break;
+            case 121: item.ChampionName = "Kha'Zix"; break;
+            case 42: item.ChampionName = "Corki"; break;
+            case 268: item.ChampionName = "Azir"; break;
+            case 51: item.ChampionName = "Caitlyn"; break;
+            case 76: item.ChampionName = "Nidalee"; break;
+            case 85: item.ChampionName = "Kennen"; break;
+            case 3: item.ChampionName = "Galio"; break;
+            case 45: item.ChampionName = "Veigar"; break;
+            case 432: item.ChampionName = "Bard"; break;
+            case 150: item.ChampionName = "Gnar"; break;
+            case 90: item.ChampionName = "Malzahar"; break;
+            case 104: item.ChampionName = "Graves"; break;
+            case 254: item.ChampionName = "Vi"; break;
+            case 10: item.ChampionName = "Kayle"; break;
+            case 39: item.ChampionName = "Irelia"; break;
+            case 64: item.ChampionName = "Lee Sin"; break;
+            case 420: item.ChampionName = "Illaoi"; break;
+            case 60: item.ChampionName = "Elise"; break;
+            case 106: item.ChampionName = "Volibear"; break;
+            case 20: item.ChampionName = "Nunu"; break;
+            case 4: item.ChampionName = "Twisted Fate"; break;
+            case 24: item.ChampionName = "Jax"; break;
+            case 102: item.ChampionName = "Shyvana"; break;
+            case 429: item.ChampionName = "Kalista"; break;
+            case 36: item.ChampionName = "Dr. Mundo"; break;
+            case 427: item.ChampionName = "Ivern"; break;
+            case 131: item.ChampionName = "Diana"; break;
+            case 223: item.ChampionName = "Tahm Kench"; break;
+            case 63: item.ChampionName = "Brand"; break;
+            case 113: item.ChampionName = "Sejuani"; break;
+            case 8: item.ChampionName = "Vladimir"; break;
+            case 154: item.ChampionName = "Zac"; break;
+            case 421: item.ChampionName = "Rek'Sai"; break;
+            case 133: item.ChampionName = "Quinn"; break;
+            case 84: item.ChampionName = "Akali"; break;
+            case 163: item.ChampionName = "Taliyah"; break;
+            case 18: item.ChampionName = "Tristana"; break;
+            case 120: item.ChampionName = "Hecarim"; break;
+            case 15: item.ChampionName = "Sivir"; break;
+            case 236: item.ChampionName = "Lucian"; break;
+            case 107: item.ChampionName = "Rengar"; break;
+            case 19: item.ChampionName = "Warwick"; break;
+            case 72: item.ChampionName = "Skarner"; break;
+            case 54: item.ChampionName = "Malphite"; break;
+            case 157: item.ChampionName = "Yasuo"; break;
+            case 101: item.ChampionName = "Xerath"; break;
+            case 17: item.ChampionName = "Teemo"; break;
+            case 75: item.ChampionName = "Nasus"; break;
+            case 58: item.ChampionName = "Renekton"; break;
+            case 119: item.ChampionName = "Draven"; break;
+            case 35: item.ChampionName = "Shaco"; break;
+            case 50: item.ChampionName = "Swain"; break;
+            case 91: item.ChampionName = "Talon"; break;
+            case 40: item.ChampionName = "Janna"; break;
+            case 115: item.ChampionName = "Ziggs"; break;
+            case 245: item.ChampionName = "Ekko"; break;
+            case 61: item.ChampionName = "Orianna"; break;
+            case 114: item.ChampionName = "Fiora"; break;
+            case 9: item.ChampionName = "Fiddlesticks"; break;
+            case 31: item.ChampionName = "Cho'Gath"; break;
+            case 33: item.ChampionName = "Rammus"; break;
+            case 7: item.ChampionName = "LeBlanc"; break;
+            case 16: item.ChampionName = "Soraka"; break;
+            case 26: item.ChampionName = "Zilean"; break;
+            case 56: item.ChampionName = "Nocturne"; break;
+            case 222: item.ChampionName = "Jinx"; break;
+            case 83: item.ChampionName = "Yorick"; break;
+            case 6: item.ChampionName = "Urgot"; break;
+            case 203: item.ChampionName = "Kindred"; break;
+            case 21: item.ChampionName = "Miss Fortune"; break;
+            case 62: item.ChampionName = "Wukong"; break;
+            case 53: item.ChampionName = "Blitzcrank"; break;
+            case 98: item.ChampionName = "Shen"; break;
+            case 201: item.ChampionName = "Braum"; break;
+            case 5: item.ChampionName = "Xin Zhao"; break;
+            case 29: item.ChampionName = "Twitch"; break;
+            case 11: item.ChampionName = "Master Yi"; break;
+            case 44: item.ChampionName = "Taric"; break;
+            case 32: item.ChampionName = "Amumu"; break;
+            case 41: item.ChampionName = "Gangplank"; break;
+            case 48: item.ChampionName = "Trundle"; break;
+            case 38: item.ChampionName = "Kassadin"; break;
+            case 161: item.ChampionName = "Vel'Koz"; break;
+            case 143: item.ChampionName = "Zyra"; break;
+
+            default: item.ChampionName = "Not Found. HeroID : " + item.champion; break;
         }
     }
 }
@@ -265,17 +192,20 @@
 
         @foreach (var item in Model.UM.matches)
         {
-        <div style="width:30%;border:1px solid black;text-align:left;padding-left:10px;margin-bottom:5px;">
-            <label>HelpIndex : </label>@(index++)<br />
-            <label>Lane : </label>@item.lane<br />
-            <label>Champion : </label>@item.ChampionName<br />
-            <label>GameID : </label>@item.gameId<br />
-            <label>PlatformID : </label>@item.platformId<br />
-            <label>Queue : </label>@item.queue<br />
-            <label>Role : </label>@item.role<br />
-            <label>Season : </label>@item.season<br />
-            <label>TimeStamp : </label>@item.timestamp<br />
-        </div>
+            <div style="width:30%;border:1px solid black;text-align:left;padding-left:10px;margin-bottom:5px;">
+                <label>HelpIndex : </label>@(index++)<br />
+                <label>Lane : </label>@item.lane<br />
+                <label>Champion : </label>@item.ChampionName<br />
+                <label>GameID : </label>@item.gameId<br />
+                <label>PlatformID : </label>@item.platformId<br />
+                <label>Queue : </label>@item.queue<br />
+                <label>Role : </label>@item.role<br />
+                <label>Season : </label>@item.season<br />
+                <label>TimeStamp : </label>@item.timestamp<br />
+                <label><a href="@Url.Action("MatchInfo","Home",new {MatchID=item.gameId })">MatchInfo</a></label>
+                <label><a href="@Url.Action("MatchTimeline","Home",new {MatchID=item.gameId })">MatchTimeline</a></label>
+            
+            </div>
         }
 
     </div>

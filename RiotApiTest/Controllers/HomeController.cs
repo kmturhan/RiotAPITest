@@ -16,7 +16,7 @@ namespace RiotApiTest.Controllers
     public class HomeController : Controller
     {
 
-        string Key = "RGAPI-5b7b2ac2-cf13-40ce-989b-02048f4e7bad";
+        string Key = "RGAPI-53c1f8b1-7a73-4f2f-8bc1-d6aa63e61acb";
 
 
 
@@ -52,7 +52,39 @@ namespace RiotApiTest.Controllers
             }
             return Json("Error GetName");
         }
-
-
+        public async Task<ActionResult> MatchInfo(int MatchID)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://tr1.api.riotgames.com/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("X-Riot-Token", Key);
+                HttpResponseMessage ResponseMatchDetail = await client.GetAsync("/lol/match/v4/matches/" + MatchID);
+                if (ResponseMatchDetail.IsSuccessStatusCode)
+                {
+                    var jsonMatchDetail = JsonConvert.DeserializeObject(ResponseMatchDetail.Content.ReadAsStringAsync().Result);
+                    return Content(jsonMatchDetail.ToString(), "application/json");
+                }
+            }
+            return Json("Error MatchInfo",JsonRequestBehavior.AllowGet);
+        }
+        public async Task<ActionResult> MatchTimeline(int MatchID)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://tr1.api.riotgames.com/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Add("X-Riot-Token", Key);
+                HttpResponseMessage ResponseMatchDetail = await client.GetAsync("/lol/match/v4/timelines/by-match/" + MatchID);
+                if (ResponseMatchDetail.IsSuccessStatusCode)
+                {
+                    var jsonMatchDetail = JsonConvert.DeserializeObject(ResponseMatchDetail.Content.ReadAsStringAsync().Result);
+                    return Content(jsonMatchDetail.ToString(), "application/json");
+                }
+            }
+            return Json("Error MatchTimelines", JsonRequestBehavior.AllowGet);
+        }
     }
 }

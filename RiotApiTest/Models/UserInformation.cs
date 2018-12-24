@@ -12,7 +12,7 @@ namespace RiotApiTest.Models
         public UserMatches.Match UMDetail { get; set; }
         public class UserInformation
         {
-            public string id { get; set; }
+            public string id { get; set; }//SummonerID 
             public string accountId { get; set; }//Match tarafında kullanılacak olan parametre.
             public string puuid { get; set; }
             public string name { get; set; }
