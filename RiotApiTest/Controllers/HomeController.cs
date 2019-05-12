@@ -11,12 +11,14 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using RiotApiTest.Models;
+using System.Text;
+
 namespace RiotApiTest.Controllers
 {
     public class HomeController : Controller
     {
 
-        string Key = "RGAPI-53c1f8b1-7a73-4f2f-8bc1-d6aa63e61acb";
+        string Key = "RGAPI-4dd6ee2d-7159-4b5b-bb1d-0950576b4a79";
 
 
 
@@ -85,6 +87,26 @@ namespace RiotApiTest.Controllers
                 }
             }
             return Json("Error MatchTimelines", JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Item()
+        {
+            List<Items> DataSet = new List<Items>();
+            using (WebClient client = new WebClient())
+            {
+                client.Encoding = Encoding.GetEncoding("UTF-8");
+                var versions = JArray.Parse(client.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json"));
+                
+                var jsonData = JObject.Parse(client.DownloadString("http://ddragon.leagueoflegends.com/cdn/" + versions.First + "/data/tr_TR/item.json"));
+
+                foreach(var item in jsonData.SelectToken("data").Children())
+                {
+                    Items data = JsonConvert.DeserializeObject<Items>(item.First.ToString());
+                    DataSet.Add(data);
+                }
+
+                return View("Item", DataSet);
+            }
         }
     }
 }

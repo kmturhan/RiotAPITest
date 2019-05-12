@@ -1,0 +1,28 @@
+﻿@model IList<RiotApiTest.Models.Items>
+@{
+    ViewBag.Title = "Item";
+}
+
+<h2>Item</h2>
+
+
+@*<script>
+    $(function () {
+        $.getJSON('http://ddragon.leagueoflegends.com/cdn/9.9.1/data/tr_TR/item.json', function (data) {
+            $.each(data.data, function (index, value) {
+                $('.item').append(`<img src="http://ddragon.leagueoflegends.com/cdn/9.9.1/img/item/${index}.png" width=30px; height=30px>`);
+                $('.item').append(value.name + '<br>');
+            });
+        })
+    })
+
+</script>*@
+
+
+
+<div class="item">
+@foreach(var item in Model)
+{
+    @item.Name<br />
+}
+</div>

@@ -18,8 +18,13 @@ namespace RiotApiTest.Controllers
         {
             WebClient wc = new WebClient();
             wc.Encoding = Encoding.GetEncoding("UTF-8");
-            var json = wc.DownloadString("http://ddragon.leagueoflegends.com/cdn/9.9.1/data/tr_TR/item.json");
- 
+
+
+            var versions = wc.DownloadString("https://ddragon.leagueoflegends.com/api/versions.json");
+            JArray currentVersion = JArray.Parse(versions);
+
+
+            var json = wc.DownloadString("http://ddragon.leagueoflegends.com/cdn/" + currentVersion.First + "/data/tr_TR/item.json");
             foreach (var item in JObject.Parse(json).SelectToken("data").Children())
             {
                 Items data = JsonConvert.DeserializeObject<Items>(item.First.ToString());
